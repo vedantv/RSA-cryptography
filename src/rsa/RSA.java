@@ -42,19 +42,7 @@ public class RSA {
 	   }
 
 	   BigInteger decrypt(BigInteger encrypted) {
-		/*   BigInteger i = new BigInteger("1");
-		   BigInteger A = BigInteger.ONE;
-		   while(i.compareTo(privateKey)== -1)
-		   {
-		   if(encrypted.modPow(i,modulus)== A)
-		   {
-			   privateKey = i;
-			   break;
-		   }
-		   i=i.add(A);
-		   }
-		   System.out.println("new privatekey is"+privateKey);
-	     */ return encrypted.modPow(privateKey, modulus);
+	 return encrypted.modPow(privateKey, modulus);
 	   }
 	   
 	   public static BigInteger toAscii(String s){
